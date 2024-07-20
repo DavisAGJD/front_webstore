@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 const WebSocketComponent = () => {
-  const [messages, setMessages] = useState([]);
-  const wsUrl = process.env.REACT_APP_WS_URL;
-
   useEffect(() => {
-    const socket = new WebSocket(wsUrl);
+    const socket = new WebSocket(process.env.REACT_APP_WS_URL);
 
     socket.onopen = () => {
       console.log('WebSocket connection established');
@@ -13,7 +10,6 @@ const WebSocketComponent = () => {
 
     socket.onmessage = (event) => {
       console.log('Message from server ', event.data);
-      setMessages((prevMessages) => [...prevMessages, event.data]);
     };
 
     socket.onerror = (error) => {
@@ -27,16 +23,11 @@ const WebSocketComponent = () => {
     return () => {
       socket.close();
     };
-  }, [wsUrl]);
+  }, []);
 
   return (
     <div>
-      <h2>WebSocket Messages</h2>
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>{message}</li>
-        ))}
-      </ul>
+      WebSocket Component
     </div>
   );
 };
