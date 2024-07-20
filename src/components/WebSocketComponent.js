@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const WebSocketComponent = () => {
   useEffect(() => {
@@ -25,11 +25,7 @@ const WebSocketComponent = () => {
     };
   }, []);
 
-  return (
-    <div>
-      WebSocket Component
-    </div>
-  );
+  return null;
 };
 
 export default WebSocketComponent;
