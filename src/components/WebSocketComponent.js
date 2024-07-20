@@ -1,48 +1,31 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect } from 'react';
 
 const WebSocketComponent = () => {
-    const socketRef = useRef(null);
+  useEffect(() => {
+    const socket = new WebSocket(`${process.env.REACT_APP_WS_URL}/ws`);
 
-    const connectWebSocket = useCallback(() => {
-        socketRef.current = new WebSocket('wss://backend-webstore.onrender.com/ws');
+    socket.onopen = () => {
+      console.log('WebSocket connection established');
+    };
 
-        socketRef.current.onopen = () => {
-            console.log('WebSocket connection established');
-        };
+    socket.onmessage = (event) => {
+      console.log('Message from server ', event.data);
+    };
 
-        socketRef.current.onmessage = (event) => {
-            console.log('Message from server ', event.data);
-        };
+    socket.onerror = (error) => {
+      console.error('WebSocket error: ', error);
+    };
 
-        socketRef.current.onerror = (error) => {
-            console.error('WebSocket error: ', error);
-        };
+    socket.onclose = (event) => {
+      console.log('WebSocket connection closed: ', event);
+    };
 
-        socketRef.current.onclose = (event) => {
-            console.log('WebSocket connection closed: ', event);
-            // Retry connection logic
-            if (!event.wasClean) {
-                console.log('Connection closed unexpectedly. Retrying...');
-                setTimeout(() => {
-                    // Recursively try to reconnect
-                    connectWebSocket();
-                }, 1000); // retry after 1 second
-            }
-        };
-    }, []); // Empty dependency array ensures this is created once
+    return () => {
+      socket.close();
+    };
+  }, []);
 
-    useEffect(() => {
-        connectWebSocket();
-
-        // Clean up on component unmount
-        return () => {
-            if (socketRef.current) {
-                socketRef.current.close();
-            }
-        };
-    }, [connectWebSocket]); // Add connectWebSocket to the dependency array
-
-    return null; // No need to render anything
+  return null;
 };
 
 export default WebSocketComponent;
