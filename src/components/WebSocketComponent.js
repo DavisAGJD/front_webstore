@@ -1,11 +1,10 @@
-// src/components/WebSocketComponent.js
 import React, { useEffect, useState } from 'react';
 
 const WebSocketComponent = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    const socket = new WebSocket('wss://front-webstore.onrender.com:10000/ws');
+    const socket = new WebSocket('wss://front-webstore.onrender.com/ws');
 
     socket.onopen = () => {
       console.log('WebSocket connection established');
