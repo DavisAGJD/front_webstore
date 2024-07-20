@@ -14,6 +14,7 @@ import AdminOrdersPage from './pages/AdminOrdersPage';
 import CustomersPage from './pages/CustomerPage';
 import CategoriesPage from './pages/CategoriesPage';
 import CategoryProductsPage from './pages/CategoryProductsPage';
+import WebSocketComponent from './components/WebSocketComponent'; // Import the WebSocketComponent
 
 const App = () => {
     return (
@@ -29,6 +30,7 @@ const App = () => {
                         <Route path="/order-history" element={<OrderHistoryPage />} />
                         <Route path="/categories" element={<CategoriesPage />} />
                         <Route path="/category/:categoryID" element={<CategoryProductsPage />} />
+                        <Route path="/websocket" element={<WebSocketComponent />} /> {/* Add this line */}
                         <Route
                             path="/admin"
                             element={<ProtectedRoute component={AdminPage} />}
