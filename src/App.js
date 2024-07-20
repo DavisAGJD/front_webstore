@@ -45,6 +45,7 @@ const App = () => {
                         />
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
+                    <WebSocketComponent /> {/* Add the WebSocketComponent */}
                 </Router>
             </CartProvider>
         </AuthProvider>
