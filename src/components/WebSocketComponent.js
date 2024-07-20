@@ -25,7 +25,7 @@ const WebSocketComponent = () => {
     };
   }, []);
 
-  return null;
+  return null
 };
 
 export default WebSocketComponent;
