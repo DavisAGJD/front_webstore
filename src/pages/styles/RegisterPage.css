@@ -57,3 +57,80 @@ body {
 .register-container button:hover {
     background-color: #c0392b;
 }
+
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
+    .register-container {
+        padding: 25px 35px;
+        max-width: 350px;
+    }
+
+    .register-container h2 {
+        font-size: 1.4em;
+    }
+
+    .register-container label {
+        font-size: 0.85em;
+    }
+
+    .register-container input, .register-container select {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    .register-container button {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px 30px;
+        max-width: 300px;
+    }
+
+    .register-container h2 {
+        font-size: 1.3em;
+    }
+
+    .register-container label {
+        font-size: 0.8em;
+    }
+
+    .register-container input, .register-container select {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .register-container button {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 15px 20px;
+        max-width: 100%;
+    }
+
+    .register-container h2 {
+        font-size: 1.2em;
+    }
+
+    .register-container label {
+        font-size: 0.75em;
+    }
+
+    .register-container input, .register-container select {
+        padding: 7px;
+        font-size: 0.75em;
+    }
+
+    .register-container button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}

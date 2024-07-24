@@ -93,18 +93,81 @@ body {
     background: #444;
 }
 
-@media (max-width: 768px) {
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
     .navbar a {
         font-size: 1em;
         margin: 0 10px;
     }
 
+    .navbar-brand {
+        font-size: 20px;
+    }
+
     .admin-customers-container {
-        padding: 10px;
+        padding: 15px;
         max-width: 90%;
     }
 
     .admin-customer-list table {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .admin-customers-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .admin-customer-list table {
         font-size: 0.8em;
+    }
+
+    .admin-customer-list th, .admin-customer-list td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 0.8em;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .admin-customers-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .admin-customers-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .admin-customer-list table {
+        font-size: 0.7em;
+    }
+
+    .admin-customer-list th, .admin-customer-list td {
+        padding: 5px;
     }
 }

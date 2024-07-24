@@ -44,3 +44,71 @@
     color: red;
     font-size: 0.9em;
 }
+
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
+    .login-container {
+        padding: 40px;
+        max-width: 350px;
+        margin: 40px auto;
+    }
+
+    .login-container h2 {
+        font-size: 1.8em;
+    }
+
+    .login-container input {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .login-container button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+        max-width: 300px;
+        margin: 30px auto;
+    }
+
+    .login-container h2 {
+        font-size: 1.6em;
+    }
+
+    .login-container input {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .login-container button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    .login-container h2 {
+        font-size: 1.4em;
+    }
+
+    .login-container input {
+        padding: 7px;
+        font-size: 0.8em;
+    }
+
+    .login-container button {
+        padding: 7px;
+        font-size: 0.8em;
+    }
+}

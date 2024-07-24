@@ -172,3 +172,129 @@
     }
 }
 
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
+    .category-card {
+        width: 130px;
+        padding: 8px;
+    }
+
+    .category-image-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .category-info h3 {
+        font-size: 0.9em;
+    }
+
+    .product-card {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-info h3 {
+        font-size: 1.3em;
+    }
+
+    .product-info p {
+        font-size: 0.9em;
+    }
+
+    .product-info button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        width: 120px;
+        padding: 8px;
+    }
+
+    .category-image-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .category-info h3 {
+        font-size: 0.8em;
+    }
+
+    .product-card {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 160px;
+    }
+
+    .product-info h3 {
+        font-size: 1.1em;
+    }
+
+    .product-info p {
+        font-size: 0.8em;
+    }
+
+    .product-info button {
+        padding: 7px 10px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .category-image-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .category-info h3 {
+        font-size: 0.7em;
+    }
+
+    .product-card {
+        width: 150px;
+        padding: 8px;
+    }
+
+    .product-card img {
+        height: 120px;
+    }
+
+    .product-info h3 {
+        font-size: 0.9em;
+    }
+
+    .product-info p {
+        font-size: 0.7em;
+    }
+
+    .product-info button {
+        padding: 6px 8px;
+        font-size: 0.7em;
+    }
+
+    .notification {
+        width: 80%;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .notification .close-button {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}

@@ -57,6 +57,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex: 1 1 calc(33.333% - 10px); /* Ajusta el ancho para tres columnas */
 }
 
 .order-products .product-card img {
@@ -69,4 +70,66 @@
 .order-products .product-card p {
     color: #fff;
     font-size: 0.9rem;
+}
+
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 768px) {
+    .admin-orders-container {
+        padding: 15px;
+    }
+
+    .admin-orders-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .order-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .order-header p {
+        font-size: 0.9rem;
+    }
+
+    .order-products h4 {
+        font-size: 1rem;
+    }
+
+    .order-products .products-container {
+        gap: 8px;
+    }
+
+    .order-products .product-card {
+        flex: 1 1 calc(50% - 8px); /* Ajusta el ancho para dos columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-orders-container {
+        padding: 10px;
+    }
+
+    .admin-orders-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .order-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .order-header p {
+        font-size: 0.8rem;
+    }
+
+    .order-products h4 {
+        font-size: 0.9rem;
+    }
+
+    .order-products .products-container {
+        gap: 5px;
+    }
+
+    .order-products .product-card {
+        flex: 1 1 100%; /* Ajusta el ancho para una columna */
+    }
 }

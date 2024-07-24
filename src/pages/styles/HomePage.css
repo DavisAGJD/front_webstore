@@ -40,3 +40,62 @@
     background-color: #555;
     transform: scale(1.05);
 }
+
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    .container h1 {
+        font-size: 3em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
+
+    .container button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .container h1 {
+        font-size: 2.5em;
+    }
+
+    .container p {
+        font-size: 0.9em;
+    }
+
+    .container button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container p {
+        font-size: 0.8em;
+    }
+
+    .container button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

@@ -56,3 +56,61 @@
     white-space: pre-wrap; /* Mantiene los saltos de línea y ajusta las palabras */
     width: 100%; /* Asegura que el contenido ocupe todo el ancho */
 }
+
+/* Media Queries para dispositivos responsivos */
+
+@media (max-width: 1024px) {
+    .category-card {
+        width: 130px;
+        padding: 8px;
+    }
+
+    .category-image-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .category-info h3 {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-container {
+        padding: 15px;
+    }
+
+    .category-card {
+        width: 120px;
+        padding: 8px;
+    }
+
+    .category-image-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .category-info h3 {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-container {
+        padding: 10px;
+    }
+
+    .category-card {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .category-image-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .category-info h3 {
+        font-size: 0.7em;
+    }
+}
