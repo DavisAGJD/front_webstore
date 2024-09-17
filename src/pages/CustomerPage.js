@@ -45,7 +45,7 @@ const CustomersPage = () => {
                             <tr key={customer.id}>
                                 <td>{customer.id}</td>
                                 <td>{customer.nombre}</td>
-                                <td>{customer.Email}</td>
+                                <td>{customer.email}</td>
                                 <td>{customer.totalCompras}</td>
                             </tr>
                         ))}
